@@ -11,7 +11,7 @@ import * as Progress from 'react-native-progress'
 
 import Styles from './app/assets/styles'
 
-import ImageInfo from './app/containers/imageinfo'
+import ImageInfo from './app/components/imageinfo'
 import FilterForm from './app/containers/filterform'
 
 const API_URL = 'https://api.unsplash.com/';
