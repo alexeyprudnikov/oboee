@@ -1,2 +1,3 @@
 # oboee
-unsplasch react-native app
+# unsplasch react native app
+@author: alexeyprudnikov
