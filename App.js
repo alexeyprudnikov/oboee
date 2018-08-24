@@ -24,7 +24,7 @@ const TYPE_SEARCH = 'search'
 
 export default class Oboee extends Component {
 	constructor(props) {
-    	super(props)
+    		super(props)
 		this.modalContent = null
 		this.currentPage = 1
 		this.type = TYPE_LIST
@@ -38,7 +38,7 @@ export default class Oboee extends Component {
 	}
 	init = () => {
 		this.data = []
-    	this.prevButtonDisabled = (this.currentPage > 1) ? false : true
+    		this.prevButtonDisabled = (this.currentPage > 1) ? false : true
 		this.currentImageIndex = 0
 	}
 	componentDidMount() {
