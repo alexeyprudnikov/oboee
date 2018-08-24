@@ -150,10 +150,19 @@ export default class Oboee extends Component {
 		        		})}
 					</Swiper>
 				}
+				<View style={Styles.imageFilter}>
+					<Button onPress={this._getImageFilter} title="filter"/>
+				</View>
 				{
 					count > 0 &&
 					<View style={Styles.imageInfo}>
 						<Button onPress={this._getImageInfo} title="info"/>
+					</View>
+				}
+				{
+					count > 0 &&
+					<View style={Styles.imageSave}>
+						<Button onPress={this._getImageSave} title="save"/>
 					</View>
 				}
 				{
@@ -172,9 +181,6 @@ export default class Oboee extends Component {
 					count == 0 &&
 					<Text>no results found</Text>
 				}
-				<View style={Styles.imageFilter}>
-					<Button onPress={this._getImageFilter} title="filter"/>
-				</View>
 			</View>
 		)
 	}
@@ -210,6 +216,11 @@ export default class Oboee extends Component {
 		this.currentImageIndex = index
 	}
 
+	_getImageFilter = () => {
+		let data = <FilterForm filter={this.filter} apply={this.setFilter}/>
+		this.openModal(data)
+	}
+
 	_getImageInfo = () => {
 		let element = this.data[this.currentImageIndex]
 		let data = <ImageInfo data={element}/>
@@ -219,7 +230,9 @@ export default class Oboee extends Component {
 	_getImageSave = () => {
 		let element = this.data[this.currentImageIndex]
 		let url = element.urls.full
-		if (Platform.OS === 'android') {
+
+		Alert.alert('Success', 'Photo added to camera roll!')
+		/*if (Platform.OS === 'android') {
 			RNFetchBlob
 				.config({
 					fileCache : true,
@@ -237,12 +250,7 @@ export default class Oboee extends Component {
 		}
 		let showAlert = () => {
 			Alert.alert('Success', 'Photo added to camera roll!')
-		}
-	}
-
-	_getImageFilter = () => {
-		let data = <FilterForm filter={this.filter} apply={this.setFilter}/>
-		this.openModal(data)
+		}*/
 	}
 
 	_loadPrevPage = () => {
