@@ -28,17 +28,17 @@ export default Styles = StyleSheet.create({
 		height: height,
 		backgroundColor: '#fff'
 	},
-	imageInfo: {
+    imageFilter: {
 		position: 'absolute',
 	    top: 34,
 	    right: 20
 	},
-	imageSave: {
+	imageInfo: {
 		position: 'absolute',
 	    top: 74,
 	    right: 20
 	},
-    imageFilter: {
+	imageSave: {
 		position: 'absolute',
 	    top: 114,
 	    right: 20
